@@ -1,0 +1,72 @@
+@use '@/styles/helpers' as *;
+
+.footer {
+  background-color: var(--color-black-06);
+
+  &__menu {
+    --footerMenuColumns: 6;
+
+    display: grid;
+    grid-template-columns: repeat(var(--footerMenuColumns), 1fr);
+    gap: 30px fluid(30, 10);
+    padding-block: fluid(100, 50);
+    border-bottom: var(--border);
+
+    @include laptop {
+      --footerMenuColumns: 3;
+    }
+
+    @include mobile {
+      --footerMenuColumns: 2;
+    }
+
+    &-list,
+    &-column {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-column {
+      row-gap: fluid(24, 16);
+    }
+
+    &-list {
+      row-gap: fluid(14, 8);
+    }
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    padding: fluid-to-laptop(24, 20) 0 fluid(50, 20);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 20px;
+    }
+
+    &-link {
+      --paddingX: #{fluid-to-laptop(20, 16)};
+
+      &:nth-child(3n) {
+        padding-left: var(--paddingX);
+      }
+
+      &:nth-child(3n-1) {
+        padding-inline: var(--paddingX);
+      }
+
+      &:nth-child(3n-2) {
+        padding-right: var(--paddingX);
+      }
+
+      &:not(:last-child) {
+        border-right: var(--border);
+      }
+    }
+  }
+}
