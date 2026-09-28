@@ -60,9 +60,6 @@
     }
 
     &:not([open]) {
-      @include tablet {
-        display: flex;
-      }
 
       @include starting-styles;
     }
