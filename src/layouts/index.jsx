@@ -8,6 +8,7 @@ export default function (props) {
     children,
     title,
     url,
+    isHeaderFixed,
   } = props
 
   return (
@@ -16,7 +17,7 @@ export default function (props) {
         <title>{`StreamVibe | ${title}`}</title>
         <script src="/src/main.js" type="module"/>.
       </Head>
-      <Header url={url}/>
+      <Header url={url} isFixed={isHeaderFixed} />
       <Content>
         {children}
       </Content>
