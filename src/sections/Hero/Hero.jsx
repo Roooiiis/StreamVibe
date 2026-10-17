@@ -1,7 +1,6 @@
 import './Hero.scss';
 import Button from "@/components/Button/index.js";
 
-
 const Hero = () => {
   const playButtonTitle = "play-video";
   const titleId = "hero-title";
