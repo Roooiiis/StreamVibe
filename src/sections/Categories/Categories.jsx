@@ -2,83 +2,9 @@ import Section from "@/layouts/Section";
 import CategoryCard from "@/components/CategoryCard/index.js";
 import Slider from "@/components/Slider";
 import SliderNavigation from "@/components/Slider/components/SliderNavigation";
+import CategoryItems from "@/sections/Categories/CategoryItem.js";
 
 const Categories = () => {
-  const CategoryItems = [
-    {
-      title: 'Action',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Adventure',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Comedy',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Drama',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Horror',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Horror',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Horror',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-    {
-      title: 'Horror',
-      images: [
-        '/src/assets/images/categories/actions/1.jpg',
-        '/src/assets/images/categories/actions/2.jpg',
-        '/src/assets/images/categories/actions/3.jpg',
-        '/src/assets/images/categories/actions/4.jpg',
-      ]
-    },
-  ];
-
   const sliderNavigationId = "categories-slider-navigation";
 
   return (
@@ -96,6 +22,7 @@ const Categories = () => {
     >
       <Slider
         navigationTargetElementId={sliderNavigationId}
+        isBeyondTheViewPortOnMobileS
       >
         {CategoryItems.map((categoryItem, index) => (
           <CategoryCard
